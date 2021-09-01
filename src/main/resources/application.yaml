@@ -1,0 +1,16 @@
+quarkus:
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: postgresql
+    jdbc:
+      url: jdbc:postgresql://database:5432/postgres
+  flyway:
+    migrate-at-start: true
+    locations: filesystem:db
+    baseline-on-migrate: true
+  hibernate-orm:
+    database:
+      generation: none
+  log:
+    level: TRACE

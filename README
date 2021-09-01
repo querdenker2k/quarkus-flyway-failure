@@ -1,0 +1,3 @@
+docker network create quarkus
+docker run --name database --hostname database --network quarkus -e POSTGRES_PASSWORD=postgresql postgres
+docker run --name quarkus --network quarkus quarkus-flyway-failure

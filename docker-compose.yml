@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  database:
+    image: postgres:latest
+    hostname: database
+    environment:
+      - POSTGRES_PASSWORD=postgresql
+  quarkus:
+    image: quarkus-flyway-failure
+    depends_on:
+      - database
