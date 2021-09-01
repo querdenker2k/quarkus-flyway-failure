@@ -7,7 +7,7 @@ quarkus:
       url: jdbc:postgresql://database:5432/postgres
   flyway:
     migrate-at-start: true
-    locations: db/blabla
+    locations: "filesystem:db/${quarkus.datasource.db-kind}"
     baseline-on-migrate: true
   hibernate-orm:
     database:
